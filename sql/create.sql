@@ -1,4 +1,6 @@
-create database user(
+--Schema SQL
+
+create table user(
     id varchar(60),
     name varchar(20),
     profileImg varchar(200),
@@ -13,3 +15,29 @@ insert into user(id, name, profileImg) values
 ('c','ㄷ',''),
 ('d','ㄹ',''),
 ('e','ㅁ','');
+
+--Query SQL
+
+-- 1
+
+SELECT id, name
+FROM user
+ORDER BY created DESC
+LIMIT 1;
+
+-- 2
+
+select name
+from user
+where id = 'asd';
+
+-- 3
+
+delete from user
+where name = '박근원';
+
+-- 4
+
+update user
+set id = 'dsa'
+where name = '김기재';
